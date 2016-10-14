@@ -6,12 +6,16 @@ var User = require('../models/user');
 var Entry = require('../models/stray_entry');
 var Posting = require('../models/posting');
 
-//Replace it with your name .yourname
-mongoose.connect('mongodb://' + mongoCreds.username + ':' + mongoCreds.password + '@ds057476.mlab.com:57476/snaap_dog');
+// We already have a connection in the main routes file (index.js)
+// mongoose.connect('mongodb://' + mongoCreds.username + ':' + mongoCreds.password + '@ds057476.mlab.com:57476/snaap_dog');
 
 var bcrpyt = require('bcrypt-nodejs');
 var randToken = require('rand-token');
 
+
+////NOTE/////
+// This will go to /api/, not /, because this is the api.js file.
+// All paths are relative to /api
 router.get('/', function(req, res, next) {
 	console.log("hahahahahaha");
   res.render('index', { title: 'Express' });
