@@ -2,7 +2,7 @@
 
 ##SnaapDog enables an open collaboration between seekers, finders, and shelters to get roaming dogs home
 
-![Alt text](img/ScreenShot2.png "Home Page")
+![Alt text](img/landing.png "Landing Page")
 
 
 ### Users will be able to:
@@ -10,7 +10,7 @@
 * Upload a picture of a roaming dog and insert into the database as a sighting - tagged with key words
 * Connect with each other without revealing personal contact information
 
-Visit here: [Portfolio](http://shirletterly.com/)
+<!-- Visit here: [Portfolio](http://) -->
 
 ###Requirements `npm install` once pulled
 
@@ -21,9 +21,28 @@ Visit here: [Portfolio](http://shirletterly.com/)
 	- Javascript
 	- jQuery 
 	- Bootstrap
+  - Ionic Framework
+  - Mongo
+
+## What you won't see in the code:
+### Ionic really starts in the terminal:
+```
+$ npm install -g ionic
+$ ionic lib update
+$ ionic start myapp [template]
+```
+###We used the tabs template.
+
+###End of setup, now to see the app!
+```
+$ ionic serve [options] 
+```           
+###We used -l as the option, which tests on multiple screen sizes and platform types.
+####https://ionicframework.com/docs/v2/cli/serve/  for more information.
+
 
 ##Sample Code
-### this code...
+### Geolocation:
 
 ```javascript
 .controller('mainCtrl', function($scope, $rootScope, $cordovaGeolocation, $ionicLoading, $ionicPlatform, fromDB, myLocation) {
@@ -69,7 +88,100 @@ Visit here: [Portfolio](http://shirletterly.com/)
     console.log(rspns);
   });
 ```
+### Using states to route: even with inner menus:
+```
+  $stateProvider
+   .state('tabs', {
+      url: "/tabs",
+      abstract: true,
+      templateUrl: "templates/tabs.html",
+      controller: 'TabsCtrl'
+    })
 
+   .state('landing', {
+    url: '/landing',
+    templateUrl: 'templates/landing.html',
+    controller: 'LogInCtrl'
+  })
+
+   .state('tabs.dash', {
+    url: '/dash',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'TabsCtrl'
+      }
+    }
+  })
+
+
+  .state('tabs.chats', {
+      url: '/tabs/chats',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'TabsCtrl'
+        }
+      }
+    })
+
+  .state('tabs.chat-detail', {
+      url: '/tabs/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'TabsCtrl'
+        }
+      }
+    })
+
+  .state('tabs.account', {
+    url: '/tabs/account',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/tab-account.html',
+        controller: 'TabsCtrl'
+      }
+    }
+  })
+  .state('tabs.listing', {
+    url: '/listing',
+    views: {
+      'tab-listing': {
+        templateUrl: 'templates/tab-listing.html',
+        controller: 'listingCtrl'
+      }
+    }
+  })
+
+  .state('tabs.snaap', {
+    url: '/snaap',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/tab-snaap.html',
+        controller: 'snaapCtrl'
+      }
+    }
+  })
+
+  .state('tabs.post', {
+    url: '/post',
+    views: {
+      'tab-post': {
+        templateUrl: 'templates/tab-post.html',
+        controller: 'postCtrl'
+      }
+    }
+  })
+  
+
+  .state('camera', {
+    url: '/camera',
+    templateUrl: 'templates/camera.html',
+    controller: 'snaapCtrl'
+  })
+
+```
 
 ####Early stages of site
 ![Alt text](img/ScreenShot1.png "Early stages of site")
@@ -82,5 +194,3 @@ Visit here: [Portfolio](http://shirletterly.com/)
 - An enhanced UX/UI design that encourages more visitors.
 
 
-###Please visit my personal profile to see more current projects.
-- [Shirlette Chambers](https://github.com/Shirlazybrat)
