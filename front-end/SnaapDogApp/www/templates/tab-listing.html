@@ -1,0 +1,42 @@
+<ion-view title="Browse Listings">
+
+	<ion-content class="has-header" has-subheader="true" padding="false">
+
+<!-- sorting -->
+
+<!-- sorting -->
+
+<!-- filtering -->
+
+		<div class="button-bar">
+			<a class="button inactiveButton" ng-click="data.filter='lost'">Lost</a>
+			<a class="button inactiveButton" ng-click="data.filter='found'">Found</a>
+		</div>
+
+
+<!-- filtering -->
+
+
+
+<ion-list>
+				<ion-item ng-repeat="stray in strays">
+        	<div ng-click="openModal(stray)">
+        		<div class="item-thumbnail-left">
+        			<img src="img/{{stray.photo[0]}}" alt="Image not found" onerror="this.src='img/Buttdog.jpg';"/>
+        			<h3>Name: {{stray.dog_name}}<h3>
+        			<h3>Location: {{stray.location.address.city}}</h3>
+        		</div>
+        	</div>
+        </ion-item>
+			</ion-list>
+</div>
+
+
+
+
+    </ion-content>
+    
+
+	    
+
+</ion-view>

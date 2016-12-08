@@ -1,0 +1,28 @@
+ <ion-view hide-nav-bar="true"  view-title="Login">
+  <ion-content class="landing">
+  <div class="fullWidth">
+      <img src="img/lost_dog_with_bundle.jpeg">
+      <h2 class="landing-title">SnaapDog</h2>
+      <h5>Find Your Dog in Real Time</h5>
+    </div>
+<form ng-submit="login()">
+    <div class="list list-inset">
+  <label class="item item-input">
+    <input type="text" ng-model="username.username" placeholder="Userame">
+  </label>
+  <label class="item item-input">
+    <input type="text" ng-model="password.password" placeholder="Password">
+  </label>
+</div>
+<div>
+      <button class="button button-block button-positive button-calm" id="log-in-button"> Log In
+      </button>
+      </div>
+      <div>
+      <a ng-href="#/register">Register here</a>
+      </div>
+    </form>
+
+
+  </ion-content>
+</ion-view>
