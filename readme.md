@@ -2,7 +2,7 @@
 
 ##SnaapDog enables an open collaboration between seekers, finders, and shelters to get roaming dogs home
 
-![Alt text](img/landing.png "Landing Page")
+![landing view](SnaapDogApp/www/img/landing.png "Landing Page")
 
 
 ### Users will be able to:
