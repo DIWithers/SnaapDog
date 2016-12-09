@@ -16,6 +16,7 @@
 
 
 ##Built with:
+```
 	- Html
 	- CSS
 	- Javascript
@@ -23,7 +24,7 @@
 	- Bootstrap
   - Ionic Framework
   - Mongo
-
+```
 ## What you won't see in the code:
 ### Ionic really starts in the terminal:
 ```
