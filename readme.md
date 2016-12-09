@@ -17,13 +17,13 @@
 
 ##Built with:
 ```
-	- Html
-	- CSS
-	- Javascript
-	- jQuery 
-	- Bootstrap
-  - Ionic Framework
-  - Mongo
+- Html
+- CSS
+- Javascript
+- jQuery 
+- Bootstrap
+- Ionic Framework
+- Mongo
 ```
 ## What you won't see in the code:
 ### Ionic really starts in the terminal:
@@ -32,6 +32,7 @@ $ npm install -g ionic
 $ ionic lib update
 $ ionic start myapp [template]
 ```
+#####If you clone this repo, you don't need the steps above.
 ###We used the tabs template.
 
 ###End of setup, now to see the app!
@@ -39,7 +40,7 @@ $ ionic start myapp [template]
 $ ionic serve [options] 
 ```           
 ###We used -l as the option, which tests on multiple screen sizes and platform types.
-####https://ionicframework.com/docs/v2/cli/serve/  for more information.
+####Visit https://ionicframework.com/docs/v2/cli/serve/  for more information.
 
 
 ##Sample Code
