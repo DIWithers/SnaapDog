@@ -12,7 +12,7 @@
 
 <!-- Visit here: [Portfolio](http://) -->
 
-###Requirements `npm install` once pulled
+###Requirements: `npm install` once cloned.
 
 
 ##Built with:
@@ -191,8 +191,8 @@ $ ionic serve [options]
 <!-- add a video of interaction with the site -->
 
 ##Future Add-ons
-- Links to more current projects.
-- Ability for visitors to send messages directly from the site to me.
+- Instant messaging between users
+- Pop-up alerts for pets just reported in your immediate 5 mile radius
 - An enhanced UX/UI design that encourages more visitors.
 
 
